@@ -1,0 +1,66 @@
+# Инструкция по установке
+
+<p class="description">Установите Material-UI, самый популярный в мире фреймворк для пользовательского интерфейса React.</p>
+
+Material-UI доступен в виде пакета [ npm ](https://www.npmjs.com/package/@material-ui/core).
+
+## npm
+
+Для установки и сохранения в вашем ` package.json ` зависимости, запустите:
+
+```sh
+// через npm
+npm install @material-ui/core@next
+
+// через yarn
+yarn add @material-ui/core@next
+```
+
+Обратите внимание, что [react](https://www.npmjs.com/package/react) > = 16.8.0 и [react-dom](https://www.npmjs.com/package/react-dom) > = 16.8.0 являются одноранговыми зависимостями.
+
+## Шрифт Roboto
+
+Material-UI был разработан на основе шрифта [Roboto](https://fonts.google.com/specimen/Roboto). So be sure to follow [these instructions]/components/typography/#general). Например, через Google Web Fonts:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+```
+
+## Иконочный шрифт
+
+Для того, чтобы использовать компонент `Icon`, вы должны сначала добавить [Material icons](https://material.io/tools/icons/) шрифт. Here are [some instructions]/components/icons/#font-icons) on how to do so. Например, через Google Web Fonts:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+```
+
+В качестве альтернативы, если вы используете JSX поверх HTML для отрисовки head:
+
+```jsx
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+```
+
+## SVG Иконки
+
+In order to use prebuilt SVG Material icons, such as those found in the [icons demos](/components/icons/) you must first install the [@material-ui/icons](https://www.npmjs.com/package/@material-ui/icons) package:
+
+```sh
+// через npm
+npm install @material-ui/icons@next
+
+// через yarn
+yarn add @material-ui/icons@next
+```
+
+## CDN
+
+Вы можете начать использовать Material-UI с минимальной интерфейсной инфраструктурой, что отлично подходит для прототипирования. Мы не рекомендуем использовать этот подход в производственных условиях - клиент должен загрузить всю библиотеку, независимо от того, какие компоненты фактически используются, как это влияет на производительность и использование полосы пропускания.
+
+#### Релизы UMD
+
+Мы предоставляем два файла универсального определения модуля (UMD):
+
+- один для разработки: https://unpkg.com/@material-ui/core@next/umd/material-ui.development.js
+- один для публикации: https://unpkg.com/@material-ui/core@next/umd/material-ui.production.min.js
+
+Вы можете следовать [этому примеру CDN](https://github.com/mui-org/material-ui/tree/next/examples/cdn-next) для быстрого старта.
